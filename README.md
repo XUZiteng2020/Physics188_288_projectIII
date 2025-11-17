@@ -1,7 +1,6 @@
 # Physics188_288_projectIII
 
 
-
 # Meeting November 17
 
 Liyuan: Feature selection. Check with original paper. Switch 7:2:1 training - validation - test.
@@ -12,7 +11,7 @@ Experiment models with selected features.
 
 A short literature review on formulas on semiconductor critical temperature.
 
-
+This Friday: Literature review and finalize papers for method/model review as time allows (accuracy). 
 
 
 # Meeting November 14
