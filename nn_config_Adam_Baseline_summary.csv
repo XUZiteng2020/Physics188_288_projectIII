@@ -1,0 +1,2 @@
+model_name,config_id,train_mse,train_rmse,train_r2,val_mse,val_rmse,val_r2,verif_mse,verif_rmse,verif_r2,best_epoch,hidden_layers,dropout,learning_rate,batch_size,weight_decay,optimizer,momentum
+Neural Network,Adam_Baseline,91.35209831395099,9.557829163254121,0.9223525111010309,136.56751480632923,11.686210455332782,0.8841845647900397,117.91938118971888,10.859069075649114,0.8976692040704514,98,"[128, 64, 32]",0.2,0.001,64,1e-05,Adam,0.0

@@ -1,0 +1,2 @@
+model_name,config_id,train_mse,train_rmse,train_r2,val_mse,val_rmse,val_r2,verif_mse,verif_rmse,verif_r2,best_epoch,hidden_layers,dropout,learning_rate,batch_size,weight_decay,optimizer,momentum
+Neural Network,MiniBatch_SGD_Momentum,100.70174838278271,10.035026077832718,0.9144054922221226,142.45001873520434,11.935242717900811,0.8791959351469425,121.03910349610308,11.001777288061374,0.8949618996098061,98,"[128, 64, 32]",0.2,0.01,64,1e-05,SGD,0.9
