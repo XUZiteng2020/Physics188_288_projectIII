@@ -1,2 +1,2 @@
-model_name,config_id,train_mse,train_rmse,train_r2,val_mse,val_rmse,val_r2,verif_mse,verif_rmse,verif_r2,best_epoch,hidden_layers,dropout,learning_rate,batch_size
-Neural Network,baseline,87.07434603430892,9.331363567791628,0.9259885164996646,133.20248582854663,11.541338129894065,0.8870382617040437,111.73180500421567,10.570326627130104,0.9030388014135594,100,"[128, 64, 32]",0.2,0.001,64
+model_name,config_id,train_mse,train_rmse,train_r2,val_mse,val_rmse,val_r2,verif_mse,verif_rmse,verif_r2,best_epoch,hidden_layers,dropout,learning_rate,batch_size,weight_decay
+Neural Network,baseline,91.85828208138295,9.584272642270928,0.9219222648430037,135.28221270808527,11.631088199652055,0.8852745591572616,120.62721458114031,10.983042136909988,0.8953193380569675,92,"[128, 64, 32]",0.2,0.001,64,1e-05
