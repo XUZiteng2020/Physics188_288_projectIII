@@ -1,0 +1,2 @@
+model_name,dataset,config_id,train_mse,train_rmse,train_r2,val_mse,val_rmse,val_r2,verif_mse,verif_rmse,verif_r2,best_epoch,hidden_layers,dropout,learning_rate,batch_size,weight_decay
+Neural Network,full,wider,87.64078472345453,9.361665702397973,0.9256453960340811,108.10627097708651,10.397416553023472,0.907635998707835,123.51936360832225,11.113926561225886,0.8926794072844123,95,"[256, 128, 64]",0.2,0.001,64,1e-05
