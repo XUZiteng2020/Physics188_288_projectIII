@@ -16,7 +16,7 @@ def save_heatmap(summary_csv, outpath, value_col="verif_r2", title=None):
     plt.imshow(pivot.values, aspect="auto")
     plt.xticks(range(len(pivot.columns)), pivot.columns, rotation=45, ha="right")
     plt.yticks(range(len(pivot.index)), pivot.index)
-    plt.colorbar(label=value_col)
+    plt.colorbar(label="test R2")
     plt.title(title if title else f"{value_col} heatmap (dataset x config)")
     plt.tight_layout()
     plt.savefig(outpath, dpi=200)
@@ -28,7 +28,7 @@ def save_best_config_bar(summary_csv, outpath, value_col="verif_r2", title=None)
 
     plt.figure(figsize=(8, 4))
     plt.bar(best["dataset"], best[value_col])
-    plt.ylabel(value_col)
+    plt.ylabel("test R2")
     plt.title(title if title else f"Best {value_col} per dataset")
     plt.tight_layout()
     plt.savefig(outpath, dpi=200)
@@ -52,7 +52,7 @@ def save_feature_set_drop_plot(all_csv, outpath):
     plt.bar(x - 0.2, drop_full_to_short.values, width=0.4, label="full - shortlist")
     plt.bar(x + 0.2, drop_full_to_long.values,  width=0.4, label="full - longlist")
     plt.xticks(x, drop_full_to_short.index, rotation=35, ha="right")
-    plt.ylabel("Δ verification R2")
+    plt.ylabel("Δ test R2")
     plt.title("Feature-set sensitivity by configuration")
     plt.legend()
     plt.tight_layout()
@@ -83,7 +83,7 @@ def save_optimizer_comparison_plot(data_eval_dir, outpath):
     plt.figure(figsize=(8, 4))
     x = np.arange(len(df))
     plt.bar(x - 0.2, df["val_r2"], width=0.4, label="validation R2")
-    plt.bar(x + 0.2, df["verif_r2"], width=0.4, label="verification R2")
+    plt.bar(x + 0.2, df["verif_r2"], width=0.4, label="test R2")
     plt.xticks(x, df["label"], rotation=25, ha="right")
     plt.ylabel("R2")
     plt.title("Optimizer comparison (summary runs)")
@@ -102,16 +102,16 @@ def main():
 
     save_heatmap( #Ver R2
         summary_csv,
-        os.path.join(figures_dir, "eval_heatmap_verif_r2.png"),
+        os.path.join(figures_dir, "eval_heatmap_test_r2.png"),
         value_col="verif_r2",
-        title="Verification R2 across datasets/configs"  
+        title="Test R2 across datasets/configs"  
     )
 
     save_best_config_bar(
         summary_csv,
-        os.path.join(figures_dir, "eval_best_verif_r2_per_dataset.png"),
+        os.path.join(figures_dir, "eval_best_test_r2_per_dataset.png"),
         value_col="verif_r2",
-        title="Best verification R2 per dataset"
+        title="Best test R2 per dataset"
     )
 
     save_heatmap( #Val R2
